@@ -23,17 +23,20 @@ def get(system=1, release=0):
 
 
 """ Please write what you want
-    like windowsxp / MacOS19.6.0 / macos / windows / linux"""
+    like windowsxp / MacOS19.6.0 / macos / windows / linux
+    returns True or Error message"""
 def control(want="linux"):
     want=want.lower()
     if want=="linux" or want=="windows" or want=="macos":
         system=get(1,0)
+        system=system.lower()
         if system==want:
             return True
         else:
             return "This program just usable in: "+want+ "\nYou are using: " + system
     else:
         system=get(1,1)
+        system = system.lower()
 
         if system == want:
             return True
@@ -44,3 +47,4 @@ def control(want="linux"):
 
 
 
+print(control("MacOS19.6.0"))
