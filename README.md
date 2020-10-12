@@ -27,7 +27,7 @@ print(findOS.get(1,1))
 ```python
 import findOS
 
-print(findOS.control("macos")
+print(findOS.control("macos"))
 
 ```
 >console: True
@@ -35,7 +35,7 @@ print(findOS.control("macos")
 ```python
 import findOS
 
-print(findOS.control("linux")
+print(findOS.control("linux"))
 
 ```
 ![False](false.png)
@@ -43,7 +43,7 @@ print(findOS.control("linux")
 ```python
 import findOS
 
-print(findOS.control("macos18.06")
+print(findOS.control("macos18.06"))
 
 ```
 
