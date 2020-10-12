@@ -8,15 +8,18 @@ import platform
 def get(system=1, release=0):
     if system == 1 and release == 1:
         if platform.system()=="Darwin":
-            system="MacOS"
-        info = system + platform.release()
+            system_name="MacOS"
+        else :
+            system_name=platform.system()
+        info = system_name + platform.release()
     elif system == 1 and release == 0:
         if platform.system()=="Darwin":
-            system="MacOS"
-        info = system
+            system_name="MacOS"
+        else :
+            system_name=platform.system()
+        info = system_name
     elif system == 0 and release == 1:
         info = platform.release()
-
 
     return info
 
@@ -26,17 +29,19 @@ def get(system=1, release=0):
     like windowsxp / MacOS19.6.0 / macos / windows / linux
     returns True or Error message"""
 def control(want="linux"):
+
     want=want.lower()
     if want=="linux" or want=="windows" or want=="macos":
-        system=get(1,0)
-        system=system.lower()
+        system_name=get(1,0)
+        print(system_name)
+        system=system_name.lower()
         if system==want:
             return True
         else:
             return "This program just usable in: "+want+ "\nYou are using: " + system
     else:
-        system=get(1,1)
-        system = system.lower()
+        system_name=get(1,1)
+        system = system_name.lower()
 
         if system == want:
             return True
@@ -45,6 +50,3 @@ def control(want="linux"):
 
 
 
-
-
-print(control("MacOS19.6.0"))
