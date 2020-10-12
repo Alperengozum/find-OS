@@ -2,7 +2,7 @@
 You can control  which OS  is running?  and which you prefer?  just with one code 
 
 
-## How we can use?
+## How can we use?
 (Example)
 
 ### findOS.get()
