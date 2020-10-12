@@ -24,7 +24,27 @@ print(findOS.get(1,1))
 >console: MacOS19.6.0
 
 ### findOS.control("OS")
+```python
+import findOS
 
+print(findOS.control("macos")
+
+```
+>console: True
+
+```python
+import findOS
+
+print(findOS.control("linux")
+
+```
 ![False](false.png)
+
+```python
+import findOS
+
+print(findOS.control("macos18.06")
+
+```
+
 ![False](falsewithversion.png)
-![True](true.png)
